@@ -1,0 +1,90 @@
+.navbar {
+    transition: all 0.4s;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .navbar-brand {
+    color: #fff;
+}
+
+body {
+    background-image: url(home_slider.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    margin: unset;
+}
+
+.navi{
+    background-color: rgba(255, 255, 255,0.5);
+}
+
+.quote{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 50px;
+}
+
+.quote2{
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 35px;
+}
+
+.container-contact3 {
+    width: 100%;  
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    align-items: center;
+    padding: unset;
+  }
+  
+  .wrap-contact3 {
+    margin: inherit;
+    width: 500px;
+    background: #ffffffec;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 72px 55px 65px 55px;
+  }
+
+    #login {
+        padding: 13px 20px 12px;
+        background-color: rgb(238, 128, 26) !important;
+        border-radius: 4px;
+        font-size: 17px;
+        font-weight: bold;
+        line-height: 20px;
+        color: #fff;
+        margin-bottom: 24px; 
+        width: 150px;
+        margin: auto;
+    }s
+
+    .login-card .login-btn:hover {
+      border: 1px solid #000;
+      background-color: transparent;
+      color: #000; 
+    }
+
+    .login-card-description {
+        font-size: 25px;
+        color: #000;
+        font-weight: normal;
+        margin-bottom: 23px; 
+    }
+
+    .gender{
+        font-weight: bold;
+    }

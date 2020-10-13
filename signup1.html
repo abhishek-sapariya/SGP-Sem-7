@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script>
+        $(window).on('scroll', function () {
+            if ( $(window).scrollTop() > 10 ) {
+                $('.navbar').addClass('active1');
+                $('.navbar').removeClass('navi');
+            } else {
+                $('.navbar').removeClass('active1');
+                $('.navbar').addClass('navi');
+            }
+        });
+    </script>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <header class="header">
+        <nav class="navbar navbar-expand fixed-top py-3 navi">
+            <div class="container justify-center">
+                <a href="#" class="navbar-brand text-uppercase font-weight-bold">Your travel guide</a>
+                                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse header-right">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold"> login <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold"> Signup <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container p-0">
+        <div class="container-contact3 mt-3 pt-5">
+            <div class ="col-sm-6 quote2">
+                 Travel is  fatal to prejudge, bigotry,and narrow mindedness, and amny of our people need it aorely on theseaccounts.
+            </div>
+            <div class ="col-sm-1">
+            </div>
+            <div class="wrap-contact3 col-sm-5 p-2">
+                <div class="card-body">
+                    <p class="login-card-description">Register yourself</p>
+                    <form action="signup.php" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="sr-only">Name</label>
+                            <input type="text" name="name" class="form-control" placeholder="Name">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="gender" class="gender font-weight-bold" name="gender">Gender</label>
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gender" value="male">Male
+                                </label>
+                                </div>
+                                <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gender" value="female">Female
+                                </label>
+                                </div>
+                                <div class="form-check disabled">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gender" value="other">Other
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Email address">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="dob" class="font-weight-bold">Date of birth</label>
+                            <input type="date" name="dob" id="dob" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="pass" id="password1" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group mt-2 mb-3">
+                            <label for="password" class="sr-only">Password</label>
+                            <input type="password" name="pass" id="password2" class="form-control" placeholder="Verfiy Password">
+                        </div>
+                        <input name="register" id="login" class="btn btn-block login-btn mb-4 align-center" type="submit" value="Register">
+                    </form>
+                    <p class="login-card-footer-text">Already have an account? <a href="index1.html" class="text-reset">login here</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+</html>
