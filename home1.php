@@ -33,7 +33,7 @@ $_SESSION['lng'] = array();
                                 
                 <div id="navbarSupportedContent" class="collapse navbar-collapse header-right">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#" class="nav-link text-uppercase font-weight-bold"> login <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item active"><a href="home1.php" class="nav-link text-uppercase font-weight-bold"> Home <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="signout.php" class="nav-link text-uppercase font-weight-bold"> Signout <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
                         
@@ -96,7 +96,7 @@ if($result2->num_rows > 0){
 echo "</div>";
 ?>
 <br/>
-<form class="contact3-form validate-form" name="myForm" onsubmit="return validateForm()" class="login100-form validate-form"  method="POST" action="schedule.html">
+<form class="contact3-form validate-form" name="myForm" onsubmit="return validateForm()" class="login100-form validate-form"  method="POST" action="schedule1.html">
 	<center><button class="btn btn-danger" type ="submit" name="signin">
 		Create New Schedule
 	</button></center>
