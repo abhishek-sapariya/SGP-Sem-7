@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <script>
+        $(window).on('scroll', function () {
+            if ( $(window).scrollTop() > 10 ) {
+                $('.navbar').addClass('active1');
+                $('.navbar').removeClass('navi');
+            } else {
+                $('.navbar').removeClass('active1');
+                $('.navbar').addClass('navi');
+            }
+        });
+    </script>
+    <title>Create Schedule</title>
+  </head>
+  <body>
+    <header class="header">
+        <nav class="navbar navbar-expand fixed-top py-3 navi">
+            <div class="container justify-center">
+                <a href="#" class="navbar-brand text-uppercase font-weight-bold">Your travel guide</a>
+                                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse header-right">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="home1.php" class="nav-link text-uppercase font-weight-bold"> Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="signout.php" class="nav-link text-uppercase font-weight-bold"> Signout <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container p-0">
+        <div class="container-contact3 mt-3 pt-5">
+            <div class="wrap-contact3 col-sm-5 p-2">
+                <div class="card-body">
+                    <form class="validate-form" name="my-form" onsubmit="return validateForm()" action="schedule.php" method="POST">
+                        <div class="form-group validate-input" data-validate="Enter your DOB">
+                            <label for="date" type="date" class="sr-only">Name</label>
+                            <input type="date" name="date" class="form-control" data-provide="datepicker" placeholder="Enter date">
+                        </div>
+                        <div class="form-group mt-2 validate-input" data-validate="Enter City">
+                            <label for="city" class="sr-only">Email</label>
+                            <input type="text" name="city" id="city" class="form-control" placeholder="City">
+                        </div>
+                        <div class="form-group mt-2 validate-input" data-validate="Enter time">
+                            <input type="text" name="stime" id="stime" class="form-control" placeholder="Start time">
+                        </div>
+                        <div class="form-group mt-2 validate-input" data-validate="Enter time">
+                            <input type="text" name="etime" id="etime" class="form-control" placeholder="End time">
+                        </div>
+                        <div class="form-group">
+                            <span ><label name="likes">Select Interests</label><br/>
+                                <label class="container">Restaurant
+                                  <input type="checkbox" name="like1" value="restaurant">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Coffee
+                                  <input type="checkbox" name="like2" value="coffee">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Food
+                                  <input type="checkbox" name="like3" value="food">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Shopping
+                                  <input type="checkbox" name="like4" value="shopping">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Historic Sites
+                                  <input type="checkbox" name="like5" value="historic sites">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Temple
+                                  <input type="checkbox" name="like6" value="temple">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Breakfast
+                                  <input type="checkbox" name="like7" value="breakfast">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Lunch
+                                  <input type="checkbox" name="like8" value="lunch">
+                                  <span class="checkmark"></span>
+                                </label>
+                                <label class="container">Dinner
+                                  <input type="checkbox" name="like9" value="dinner">
+                                  <span class="checkmark"></span>
+                                </label>
+        
+                        </span></div>	
+                        
+                        <div style="text-align: center;">
+                            <button class="btn btn-success" type ="submit" name="signin">
+                                Submit
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+
+</html>
