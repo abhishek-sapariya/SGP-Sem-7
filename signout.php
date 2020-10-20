@@ -1,5 +1,5 @@
 <?php
 session_destroy();
 
-header('location:/Smart-Tourist-Guide-master/index1.html');
+header('location:index1.html');
 ?>

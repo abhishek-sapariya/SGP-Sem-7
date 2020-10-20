@@ -83,7 +83,7 @@ for($i = 1; $i < $_SESSION['index']; $i++){
 <!DOCTYPE html>
         <html lang="en">
         <head>
-          <meta charset="UTF-8">
+		  <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
           <title>Smart Guide</title>
@@ -96,51 +96,59 @@ for($i = 1; $i < $_SESSION['index']; $i++){
 		  <style>
 			.column1 {
 				float: left;
-				width: 50%;
+				width: 60%;
 			}
 
 			.column2 {
 				float: right;
 				width: 40%;
 			}
+			.btn-space{
+				margin-bottom: 10px;
+			}
 		  </style>
-		<link rel="stylesheet" type="text/css" href="util.css">
-		<link rel="stylesheet" type="text/css" href="main.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         </head>
         <body>
 		
 		<!-- Header -->
-		<div class="header">
-			<a href="home1.php" class="logo">Smart City Traveller</a>
-			<div class="header-right">
-				<a class="active" href="home1.php">Home</a>
-				<a href="signout.php">signout<img src="images/icons/user_ironman.png"/></a>
-				<a href="#">About us</a>
-			</div>
-		</div>
+		<header class="header">
+        <nav class="navbar navbar-expand fixed-top py-3 navi">
+            <div class="container justify-center">
+                <a href="#" class="navbar-brand text-uppercase font-weight-bold">Your travel guide</a>
+                                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse header-right">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="home1.php" class="nav-link text-uppercase font-weight-bold"> Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="signout.php" class="nav-link text-uppercase font-weight-bold"> Signout <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
 <!-- Content -->
 		
 		
-		<div class="bg-contact3" style="background-image: url('home_slider.jpg');">
+		<div class="bg-contact3">
 
 			<div class="container-contact3 container-fluid">
 				<div class="row">
 					<div class="column1">
 
 						<div class="split left">
-								<h1><font color="Black">Your Route</font></h1>
+								<center><h2><font color="Black">Your Route</font></h2></center>
 								<div id="map"></div>
 						</div>
 					</div>
 					<div class="column2">
 						<div class="split right">
-								<h1><font color="Black">Venue List</font></h1>
+								<center><h2><font color="Black">Venue List</font></h2></center>
 								<div class="wrap-contact3" id="ven"></div>
 						</div>
 					</div>
@@ -249,7 +257,7 @@ for($i = 1; $i < $_SESSION['index']; $i++){
 			btn.innerHTML = loc_name[i]+" &nbsp &nbsp &nbsp Distance:"+distance[i];
 	//		btn.setAttribute("class","btnsize");
 			btn.setAttribute("id","btn"+i);
-			btn.setAttribute("class", "class=btn btn-default btn-sm btn-block")
+			btn.setAttribute("class", "class=btn btn-sm btn-outline-primary font-weight-bold btn-space")
 			btn.setAttribute("onclick", "#");
 			document.getElementById("ven").appendChild(btn);
 		}
