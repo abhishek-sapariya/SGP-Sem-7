@@ -18,31 +18,44 @@ $etime = $_GET['etime'];
 <title>Venues</title>
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="util.css">
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<style>
+			.btn-space{
+				margin-bottom: 10px;
+				margin-right: 10px;
+				padding-;
+			}
+		  </style>
+	<link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body onload="javascript:get_response(create_obj)">
 
 <!-- Header -->
-<div class="header">
-  <a href="home1.php" class="logo">Smart City Traveller</a>
-  <div class="header-right">
-    <a class="active" href="home1.php">Home</a>
-	<a href="signout.php">signout<img src="images/icons/user_ironman.png"/></a>
-	<a href="#">About us</a>
-  </div>
-</div>
+<header class="header">
+        <nav class="navbar navbar-expand fixed-top py-3 navi">
+            <div class="container justify-center">
+                <a href="#" class="navbar-brand text-uppercase font-weight-bold">Your travel guide</a>
+                                
+                <div id="navbarSupportedContent" class="collapse navbar-collapse header-right">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="home1.php" class="nav-link text-uppercase font-weight-bold"> Home <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold"> Signup <span class="sr-only">(current)</span></a></li>
+                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
 
 
 <!-- Content -->
 
-	<div class="bg-contact3" style="background-image: url('home_slider.jpg');">
-		<div class="container-contact3 container-fluid">
-			<div class="wrap-contact3 container-fluid" id="venue1"><center>
+	<div class="bg-contact3">
+		<div class="container-contact3">
+			<div class="wrap-contact3 container-fluid d-flex-content-center p-2"><center>
+				<div class="btn-group-verticl" id="venue1">
 			<h1 id="ven"></h1>
 			<p id="not_found"></p>
 <script>
@@ -113,16 +126,12 @@ function create_obj(){
 		console.log(Response2);
 		var rate = Response2.response.venue.rating;
 		*/
-				var min=3; 
-				var max=9;
-				var random =Math.floor(Math.random() * (+max - +min)) + +min;
 				var btn = document.createElement("div");
-				btn.innerHTML = name+"<br>Rating: "+random;
+				btn.innerHTML = name;
 		//btn.setAttribute("class","btnsize");
 				btn.setAttribute("type","button");
 				btn.setAttribute("id","btn"+i);
-				btn.setAttribute("class", "btn btn-default btn-sm btn-block");
-				btn.setAttribute("style","margin-bottom:16px");
+				btn.setAttribute("class", "btn btn-sm btn-outline-primary btn-space");
 				btn.setAttribute("onclick","create_session('"+name+"',"+lat+","+lng+")");
 				document.getElementById("venue1").appendChild(btn);
 			}
@@ -148,6 +157,7 @@ function del_query(){
 	window.location = "like_session.php?date1="+date1+"&stime="+stime+"&etime="+etime+"&dayNo="+dayNo+"&type="+QUERY+"&flag=0";
 }
 </script>
+</div>
 </center>
 </div>
 </div>
