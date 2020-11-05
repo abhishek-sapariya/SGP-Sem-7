@@ -17,7 +17,7 @@ $_SESSION['lng'] = array();
 <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-<title>home</title>
+<title>Home</title>
 <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -35,7 +35,7 @@ $_SESSION['lng'] = array();
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a href="home1.php" class="nav-link text-uppercase font-weight-bold"> Home <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="signout.php" class="nav-link text-uppercase font-weight-bold"> Signout <span class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        <li class="nav-item"><a href="aboutus.html" class="nav-link text-uppercase font-weight-bold">About</a></li>
                         
                     </ul>
                 </div>

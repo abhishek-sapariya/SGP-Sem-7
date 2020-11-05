@@ -13,7 +13,9 @@ for($i = 1; $i < $_SESSION['index']; $i++){
 	//$lat_long=$lat_long+$_SESSION['lat'][$_SESSION['ival']]." ".$_SESSION['lng'][$_SESSION['ival']]."<br>";
   if($i==$_SESSION['index']-1)
   {
-     $lat_long .= $_SESSION['lat'][$_SESSION['ival']] . ','.$_SESSION['lng'][$_SESSION['ival']];
+	 $lat_long .= $_SESSION['lat'][$_SESSION['ival']] . ','.$_SESSION['lng'][$_SESSION['ival']];
+	 $_SESSION['mylat'] = $_SESSION['lat'][$_SESSION['ival']];
+     $_SESSION['mylng'] = $_SESSION['lng'][$_SESSION['ival']];
   }
   else
   {
@@ -42,7 +44,7 @@ $_SESSION['ival'] = 1;
 <?php
 //index.php
 
-$subject = 'smart city suggestions';
+$subject = 'Travel Guide Suggestions';
 $message = '';
 $gmap="https://www.google.com/maps/search/?api=1&query=";
 $rest=explode(',', $venues);
@@ -64,11 +66,11 @@ for($i = 1; $i < $_SESSION['index']; $i++){
 		$mail->Host = 'smtp.gmail.com';		//Sets the SMTP hosts of your Email hosting, this for Godaddy
 		$mail->Port = '587';								//Sets the default SMTP server port
 		$mail->SMTPAuth = true;							//Sets SMTP authentication. Utilizes the Username and Password variables
-		$mail->Username = 'smartguide.mnnit@gmail.com';					//Sets SMTP username
-		$mail->Password = '2018is10';					//Sets SMTP password
+		$mail->Username = 'travelguide114@gmail.com';					//Sets SMTP username
+		$mail->Password = '99111114';					//Sets SMTP password
 		$mail->SMTPSecure = 'tls';							//Sets connection prefix. Options are "", "ssl" or "tls"
-		$mail->From ="smartguide.mnnit@gmail.com";					//Sets the From email address for the message
-		$mail->FromName ='smart city travelers';				//Sets the From name of the message
+		$mail->From ="travelguide114@gmail.com";					//Sets the From email address for the message
+		$mail->FromName ='Abhishek Sapariya';				//Sets the From name of the message
 		 $mail->AddAddress($_SESSION['email'],"Customer");		//Adds a "To" address
 		//$mail->AddCC($email, $_POST["name"]);	//Adds a "Cc" address
 		$mail->WordWrap = 50;							//Sets word wrapping on the body of the message to a given number of characters
@@ -86,7 +88,7 @@ for($i = 1; $i < $_SESSION['index']; $i++){
 		  <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <meta http-equiv="X-UA-Compatible" content="ie=edge">
-          <title>Smart Guide</title>
+          <title>Travel Guide</title>
           <style>
             #map{
               height:500px;
@@ -123,7 +125,7 @@ for($i = 1; $i < $_SESSION['index']; $i++){
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a href="home1.php" class="nav-link text-uppercase font-weight-bold"> Home <span class="sr-only">(current)</span></a></li>
                         <li class="nav-item"><a href="signout.php" class="nav-link text-uppercase font-weight-bold"> Signout <span class="sr-only">(current)</span></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link text-uppercase font-weight-bold">About</a></li>
+                        <li class="nav-item"><a href="aboutus.html" class="nav-link text-uppercase font-weight-bold">About</a></li>
                         
                     </ul>
                 </div>
